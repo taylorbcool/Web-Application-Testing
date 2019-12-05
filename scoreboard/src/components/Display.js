@@ -11,6 +11,8 @@ const Display = () => {
     const [homeHits, setHomeHits] = useState(0);
     const [awayScore, setAwayScore] = useState(0);
     const [awayHits, setAwayHits] = useState(0);
+    const [homeErrors, setHomeErrors] = useState(0);
+    const [awayErrors, setAwayErrors] = useState(0);
 
     const handleInning = () => {
         setInning(inning + 1)
@@ -31,20 +33,30 @@ const Display = () => {
         setBalls(0);
     }
     const handleFoul = () => {
-        strikes < 2 ? setStrikes(strikes + 1) : null
+        strikes < 2 ? setStrikes(strikes + 1) : setStrikes(2)
     }
     const handleOuts = () => {
         outs < 2 ? setOuts(outs + 1) : setOuts(0)
         resetCount()
     }
-    // const handleScore = team => {
-    //     team = 'home' ? setHomeScore(homeScore + 1) : null
-    //     team = 'away' ? setAwayScore(awayScore + 1) : null
-    // }
-    // const handleHit = team => {
-    //     team = 'home' ? setHomeHits(homeHits + 1) : null
-    //     team = 'away' ? setAwayHits(awayHits + 1) : null
-    // }
+    const handleScoreHome = () => {
+        setHomeScore(homeScore + 1)
+    }
+    const handleScoreAway = () => {
+        setAwayScore(awayScore + 1)
+    }
+    const handleHitHome = () => {
+        setHomeHits(homeHits + 1)
+    }
+    const handleHitAway = () => {
+        setAwayHits(awayHits + 1)
+    }
+    const handleErrorHome = () => {
+        setHomeErrors(homeErrors + 1)
+    }
+    const handleErrorAway = () => {
+        setAwayErrors(awayErrors + 1)
+    }
 
     return (
         <div className="container">
@@ -60,6 +72,10 @@ const Display = () => {
                         <h4>Hits</h4>
                         <p>{homeHits}</p>
                     </div>
+                    <div className='home-errors'>
+                        <h4>Errors</h4>
+                        <p>{homeErrors}</p>
+                    </div>
                 </div>
                 <div className="away">
                     <h2 className="away-name">Away</h2>
@@ -71,6 +87,10 @@ const Display = () => {
                         <h4>Hits</h4>
                         <p>{awayHits}</p>
                     </div>
+                    <div className='away-errors'>
+                        <h4>Errors</h4>
+                        <p>{awayErrors}</p>
+                    </div>
                 </div>
             </div>
             <BottomRow 
@@ -80,8 +100,12 @@ const Display = () => {
                 outs={outs}
             />
             <Dashboard 
-                //handleScore={handleScore}
-                //handleHit={handleHit}
+                handleScoreHome={handleScoreHome}
+                handleHitHome={handleHitHome}
+                handleErrorHome={handleErrorHome}
+                handleScoreAway={handleScoreAway}
+                handleHitAway={handleHitAway}
+                handleErrorAway={handleErrorAway}
                 handleOuts={handleOuts}
                 handleStrikes={handleStrikes}
                 handleFoul={handleFoul}

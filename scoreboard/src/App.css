@@ -1,6 +1,7 @@
 .container{
   width: 95%;
   margin: 2rem auto;
+  text-align: center;
 }
 
 .topRow{
@@ -11,16 +12,23 @@
 .home{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
 }
 
 .away{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
 }
 
 .bottom-row{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
 }
 
 .buttons{

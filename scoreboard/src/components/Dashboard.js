@@ -6,12 +6,14 @@ const Dashboard = props => {
         <div className='buttons'>
         <section className="score-buttons">
             <div className="homeButtons">
-                <button className="homeButton-score" /*onClick={props.handleScore('home')} */>Home Score</button>
-                <button className="homeButton-hit" /*onClick={props.handleHit('home')} */>Home Hits</button>
+                <button className="homeButton-score" onClick={props.handleScoreHome}>Home Score</button>
+                <button className="homeButton-hit" onClick={props.handleHitHome}>Home Hit</button>
+                <button className="homeButton-error" onClick={props.handleErrorHome}>Home Error</button>
             </div>
             <div className="awayButtons">
-                <button className="awayButton-score" /*onClick={props.handleScore('away')}*/>Away Score</button>
-                <button className="awayButton-hit" /*onClick={props.handleScore('away')}*/>Away Hits</button>
+                <button className="awayButton-score" onClick={props.handleScoreAway}>Away Score</button>
+                <button className="awayButton-hit" onClick={props.handleHitAway}>Away Hit</button>
+                <button className="awayButton-error" onClick={props.handleErrorAway}>Away Error</button>
             </div>
         </section>
         <section className='other-buttons'>
