@@ -1,0 +1,45 @@
+.container{
+  width: 95%;
+  margin: 2rem auto;
+}
+
+.topRow{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.home{
+  display: flex;
+  justify-content: space-around;
+}
+
+.away{
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-row{
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.score-buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.other-buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem auto;
+}
