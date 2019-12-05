@@ -64,32 +64,36 @@ const Display = () => {
             <div className="topRow">
                 <div className="home">
                     <h2 className="home-name">Home</h2>
-                    <div className="home-score">
-                        <h4>Score</h4>
-                        <p>{homeScore}</p>
-                    </div>
-                    <div className="home-hits">
-                        <h4>Hits</h4>
-                        <p>{homeHits}</p>
-                    </div>
-                    <div className='home-errors'>
-                        <h4>Errors</h4>
-                        <p>{homeErrors}</p>
+                    <div className='home-stats'>
+                        <div className="home-score">
+                            <h4>Score</h4>
+                            <p>{homeScore}</p>
+                        </div>
+                        <div className="home-hits">
+                            <h4>Hits</h4>
+                            <p>{homeHits}</p>
+                        </div>
+                        <div className='home-errors'>
+                            <h4>Errors</h4>
+                            <p>{homeErrors}</p>
+                        </div>
                     </div>
                 </div>
                 <div className="away">
                     <h2 className="away-name">Away</h2>
-                    <div className="away-score">
-                        <h4>Score</h4>
-                        <p>{awayScore}</p>
-                    </div>
-                    <div className="away-hits">
-                        <h4>Hits</h4>
-                        <p>{awayHits}</p>
-                    </div>
-                    <div className='away-errors'>
-                        <h4>Errors</h4>
-                        <p>{awayErrors}</p>
+                    <div className='away-stats'>
+                        <div className="away-score">
+                            <h4>Score</h4>
+                            <p>{awayScore}</p>
+                        </div>
+                        <div className="away-hits">
+                            <h4>Hits</h4>
+                            <p>{awayHits}</p>
+                        </div>
+                        <div className='away-errors'>
+                            <h4>Errors</h4>
+                            <p>{awayErrors}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,6 +103,7 @@ const Display = () => {
                 strikes={strikes}
                 outs={outs}
             />
+            </section>
             <Dashboard 
                 handleScoreHome={handleScoreHome}
                 handleHitHome={handleHitHome}
@@ -113,7 +118,6 @@ const Display = () => {
                 resetInning={resetInning}
                 handleInning={handleInning}
             />
-        </section>
         </div>
     );
 }
