@@ -1,0 +1,100 @@
+.container{
+  width: 95%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.scoreboard{
+  background-color: #57776a;
+}
+
+.topRow{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.home{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.home-stats{
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+}
+
+.away{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.away-stats{
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+}
+
+.bottom-row{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 1rem auto;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.score-buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.other-buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem;
+}
+
+.btn{
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  background-color: slategray;
+  color: white;
+}
+
+.btn:hover{
+  background-color: white;
+  color: black;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h4{
+  font-size: 1.5rem;
+}
+
+p{
+  font-size: 3rem;
+}
